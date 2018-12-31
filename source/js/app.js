@@ -1,10 +1,5 @@
+var responsiveNavbtn = document.getElementsByClassName("nav-btn");
 
-// JavaScript
-window.sr = ScrollReveal(); 
-
-// sr.reveal('h1', {
-//     delay: 0,
-//     duration: 200,
-//     origin: 'bottom',
-//     distance: '100px' 
-// });
+function changeNavBtnBackground() {
+  responsiveNavbtn.style.background = "orange";
+}

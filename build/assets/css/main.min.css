@@ -8,7 +8,8 @@ html {
   padding: 0;
   width: 100%;
   height: 100vh;
-  color: orange; }
+  color: orange;
+  scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -88,6 +89,8 @@ nav ul {
     width: 750px;
     margin: 50px auto; }
     .page2 .timeline .timeline-text {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
       margin: 0;
       padding: 0;
       width: 300px;
@@ -122,6 +125,8 @@ nav ul {
         display: none; }
       .page2 .timeline .timeline-text ul:before {
         display: none; }
+    .page2 .timeline .timeline-text:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
     .page2 .timeline .timeline-text:before {
       content: "";
       position: absolute;
@@ -186,6 +191,82 @@ nav ul {
       top: 0;
       background: black; }
 
+.page3 {
+  width: 100%;
+  height: 100vh;
+  background: orange; }
+  .page3 .projectHeader {
+    width: 40%;
+    height: 100vh;
+    background: purple;
+    float: left; }
+    .page3 .projectHeader .localnav {
+      position: relative;
+      top: 40%;
+      text-align: center;
+      margin-left: -50px; }
+      .page3 .projectHeader .localnav ul {
+        list-style: none; }
+        .page3 .projectHeader .localnav ul li {
+          display: inline;
+          margin-right: 5px; }
+          .page3 .projectHeader .localnav ul li a {
+            text-decoration: none;
+            outline: none;
+            color: black; }
+  .page3 .projectBody {
+    width: 60%;
+    height: 100vh;
+    background: yellow;
+    float: right;
+    overflow: hidden; }
+    .page3 .projectBody .projectBodywrapper {
+      width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      box-sizing: content-box;
+      padding-right: 20px;
+      margin-left: 0px;
+      scroll-behavior: smooth; }
+      .page3 .projectBody .projectBodywrapper .testdata {
+        width: 104%;
+        height: 100vh;
+        background: whitesmoke;
+        margin: 0px auto;
+        border-style: solid;
+        border-color: black;
+        border-top: 0px;
+        border-left: 0px; }
+      .page3 .projectBody .projectBodywrapper .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        margin: 0;
+        margin-top: 10px; }
+      .page3 .projectBody .projectBodywrapper .active, .page3 .projectBody .projectBodywrapper .collapsible:hover {
+        background-color: #555; }
+      .page3 .projectBody .projectBodywrapper .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-right: 18px; }
+      .page3 .projectBody .projectBodywrapper .active:after {
+        content: "\2212"; }
+      .page3 .projectBody .projectBodywrapper .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1; }
+
 .page4 {
   overflow: hidden;
   margin: 0;
@@ -221,6 +302,14 @@ nav ul {
     width: 100px; }
 
 @media screen and (max-width: 764px) {
+  .page3 {
+    height: 200vh; }
+    .page3 .projectHeader {
+      width: 100%;
+      float: none; }
+    .page3 .projectBody {
+      width: 100%;
+      float: none; }
   .page2 .timeline {
     width: 80%; }
     .page2 .timeline ul li:nth-child(odd) .timeline-text {

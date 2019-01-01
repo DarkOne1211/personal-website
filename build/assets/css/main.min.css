@@ -17,12 +17,18 @@ body {
   height: 100vh;
   font-family: Poppins;
   font-weight: 400;
-  background: url(../img/architecture-blur-buildings-204366.jpg);
+  background: white;
   background-position: center;
   background-size: cover; }
 
 nav {
-  padding: 8px; }
+  background: black;
+  padding: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 90; }
 
 .logo {
   float: left;
@@ -49,14 +55,197 @@ nav ul {
     nav ul li a {
       display: inline-block;
       outline: none;
-      color: #ffffff;
+      color: orange;
       text-transform: uppercase;
       text-decoration: none;
       font-size: 14px;
       letter-spacing: 1.2px;
       font-weight: 600; }
 
-@media screen and (max-width: 600px) {
+.page1 {
+  background: black;
+  width: 100%;
+  height: 100vh; }
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+  .hero-text h1 {
+    color: white; }
+
+.page2 {
+  margin: 0;
+  padding: 0;
+  color: black; }
+  .page2 .timeline {
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    background: #ffffff;
+    width: 750px;
+    margin: 50px auto; }
+    .page2 .timeline .timeline-text {
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      padding: 25px;
+      color: #000000;
+      background: whitesmoke;
+      float: right;
+      position: relative; }
+      .page2 .timeline .timeline-text h3 {
+        width: 100%;
+        text-align: center;
+        background: orange; }
+      .page2 .timeline .timeline-text p {
+        margin-top: 25px; }
+      .page2 .timeline .timeline-text ul {
+        float: left; }
+      .page2 .timeline .timeline-text .marginwrapper {
+        margin-top: 25px; }
+      .page2 .timeline .timeline-text .marginpwrapper {
+        margin-top: 40px; }
+      .page2 .timeline .timeline-text .skillsused {
+        padding: 10px;
+        margin: 0;
+        margin-left: 0px;
+        display: inline;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+        background: orange;
+        margin-top: -10px; }
+      .page2 .timeline .timeline-text li:before {
+        display: none; }
+      .page2 .timeline .timeline-text ul:before {
+        display: none; }
+    .page2 .timeline .timeline-text:before {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-left: 10px solid orange;
+      border-top: 10px solid  transparent;
+      border-bottom: 10px solid transparent;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%); }
+    .page2 .timeline ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: relative; }
+      .page2 .timeline ul li {
+        width: 100%;
+        position: relative;
+        padding: 50px 0 20px 0;
+        overflow: hidden;
+        margin-left: auto; }
+        .page2 .timeline ul li h3 {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          background: black;
+          color: white;
+          padding: 8px 25px;
+          top: 0;
+          margin: 0; }
+      .page2 .timeline ul li:nth-child(odd) .timeline-text {
+        float: left; }
+      .page2 .timeline ul li:nth-child(odd) .timeline-text:before {
+        right: -10px; }
+      .page2 .timeline ul li:nth-child(even) .timeline-text:before {
+        left: -10px;
+        border-left: 0px solid orange;
+        border-right: 10px solid orange; }
+      .page2 .timeline ul li:before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: orange;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 8px; }
+      .page2 .timeline ul li:last-child:before {
+        display: none; }
+      .page2 .timeline ul li:last-child {
+        padding: 17px 0; }
+    .page2 .timeline ul:before {
+      content: "";
+      height: 100%;
+      width: 3px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      background: black; }
+
+.page4 {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  color: white; }
+  .page4 .linklogos {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .page4 h1 {
+    position: relative;
+    text-align: center;
+    top: 40%;
+    text-transform: uppercase; }
+  .page4 p {
+    position: relative;
+    text-align: center;
+    top: 40%; }
+  .page4 a {
+    text-decoration: none; }
+  .page4 .linkedinlink img {
+    width: 50px; }
+  .page4 .githublink img {
+    width: 100px; }
+
+@media screen and (max-width: 764px) {
+  .page2 .timeline {
+    width: 80%; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text {
+      float: none;
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text {
+      float: none;
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 8px; }
   .logo {
     padding: 0; }
   .nav-wrapper {
@@ -110,6 +299,7 @@ nav ul {
     width: 48px;
     height: 48px;
     cursor: pointer;
+    margin-right: 10px;
     z-index: 9999;
     border-radius: 50%; }
     .nav-btn i {

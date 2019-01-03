@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./assets/css/main.min.css" />
   </head>
-  <body onresize="readjustHeight()">
+  <body>
     <div class="page1">
       <nav>
         <input type="checkbox" id="nav" class="hidden" />
         <label for="nav" class="nav-btn" onclick="changeNavBtnBackground()">
           <i></i> <i></i> <i></i>
         </label>
-        <div class="logo"><a href="#">BRAND</a></div>
         <div class="nav-wrapper">
           <ul>
             <li><a href="#">Home</a></li>
@@ -29,10 +28,12 @@
       <h3>Welcome to my website</h3>
     </div>
     <div class="page2" id="About">
-      <p>
-        I'm currently a senior at Purdue University studying Computer
-        Engineering
-      </p>
+      <div class="AboutHeader">
+        <p>
+          ABOUT
+        </p>
+      </div>
+      <div class="page2left"></div>
       <section class="timeline">
         <ul>
           <li>
@@ -103,20 +104,17 @@
     </div>
     <div class="page3" id="Projects">
       <div class="projectHeader">
+        <div class="heroTitle">
+          Projects
+        </div>
         <div class="localnav">
-            <ul>
-                <li><a href="#testData1">test1</a></li>
-                <li>/</li>
-                <li><a href="#testdata2">test2</a></li>
-                <li>/</li>
-                <li><a href="#testdata3">test3</a></li>
-                <li>/</li>
-                <li><a href="#testdata4">test4</a></li>
-                <li>/</li>
-                <li><a href="#testdata5">test5</a></li>
-                <li>/</li>
-                <li><a href="#testdata6">test6</a></li>
-              </ul>
+          <ul>
+            <li><a href="#testData1">C/C++</a></li>
+            <li><a href="#testdata2">Python</a></li>
+            <li><a href="#testdata3">Machine Leaning</a></li>
+            <li><a href="#testdata4">Artificial Intelligence</a></li>
+            <li><a href="#testdata5">Miscellaneous</a></li>
+          </ul>
         </div>
       </div>
       <div class="projectBody">

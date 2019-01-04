@@ -325,7 +325,9 @@ nav ul
                 height: 100vh
                 h1
                     position: relative
-                    top: 50%
+                    top: 40%
+                    transition: 0.7s ease
+
             .python_header_image
                 color: whitesmoke
                 background: url('../img/python_logo.png')
@@ -344,7 +346,7 @@ nav ul
                 height: 100vh
                 h1
                     position: relative
-                    top: 50%
+                    top: 40%
             
             .c_header_image
                 color: whitesmoke
@@ -365,11 +367,11 @@ nav ul
                 h1
                     color: white
                     position: relative
-                    top: 50%
+                    top: 40%
 
             .testdata
                 width: 104%
-                height: 200vh
+                height: 100vh
                 background: whitesmoke
                 margin: 0px auto
                 h1
@@ -379,7 +381,12 @@ nav ul
                     font-size: 36px
                     text-align: center
                     font-family: Caviar Dreams Bold
+                
+                .offset1
+                    top: 15%
+
                 .card
+                    display: none
                     margin-top: 15px 
                     margin-left: 10px
                     background: white
@@ -395,14 +402,78 @@ nav ul
                     padding: 2px 16px
                 
                 .C_Header
-                    display: flex
+                    z-index: 9
+                    display: none
                     flex-wrap: wrap
                     flex-direction: row
                     justify-content: flex-start
-                    width: 90%
-                    height: 100px
+                    align-content: flex-start
+                    width: 100%
+                    height: 100vh
+                    background: whitesmoke
+                    margin: 0
+                    padding: 0
                     margin: 0 auto
-                    display: hidden
+                    position: relative
+                    top: -35%
+
+                .readmorecontainer
+                    z-index: 10
+                    padding: 2px 16px
+                    cursor: pointer
+                    background: orange
+                    position: relative
+                    left: 45%
+                    top: 45%
+                    width: 50px
+                    height: 50px
+                    margin: 0
+                    border-radius: 100px
+                    transition: 0.5s linear
+
+                .bar1, .bar3
+                    width: 25px
+                    height: 5px
+                    background-color: #ffffff
+                    margin: 6px 0
+                    transition: 0.4s
+                    margin-left: -6px
+                
+                .bar1
+                    -webkit-transform: rotate(45deg)
+                    -moz-transform: rotate(45deg)
+                    -o-transform: rotate(45deg)
+                    -ms-transform: rotate(45deg)
+                    transform: rotate(45deg)
+                    position: relative
+                    left: -5px
+                    top: 15px
+
+                .bar3
+                    -webkit-transform: rotate(135deg)
+                    -moz-transform: rotate(135deg)
+                    -o-transform: rotate(135deg)
+                    -ms-transform: rotate(135deg)
+                    transform: rotate(135deg)
+                    position: relative
+                    left: 9px
+                    top: 4px
+
+                .change .bar1
+                    -webkit-transform: rotate(-45deg) translate(-5px, 5px)
+                    transform: rotate(-45deg) translate(5px, 5px)
+
+                .change .bar2 
+                    opacity: 0
+
+                .change .bar3 
+                    -webkit-transform: rotate(45deg) translate(-5px, 5px)
+                    transform: rotate(45deg) translate(-5px, 5px)
+                
+                .change
+                    position: fixed
+                    left: 3%
+                    top: 2%
 
 .page4
     overflow: hidden
@@ -664,6 +735,12 @@ nav ul
               .testdata
                   .card
                     width: 45%
+                  .readmorecontainer
+                      left: 43%
+                  .change
+                    position: fixed
+                    left: 3.5%
+                    top: 1.5%
 
   .page2
     .timeline
@@ -916,7 +993,7 @@ nav ul
           .localnav
             top: 2%
 
-@media screen and (max-height: 680px)
+@media screen and (max-height: 700px)
   .page3
       .projectHeader
           .heroTitle
@@ -944,7 +1021,7 @@ nav ul
                    img 
                        height: 70px 
 
-@media screen and (max-height: 580px)
+@media screen and (max-height: 600px)
   .page3
       .projectHeader
           .heroTitle
@@ -954,10 +1031,14 @@ nav ul
             top: 1%
             ul
                 li
-                   width: 45%
+                   width: 40%
                    height: 80px
                    img 
                        height: 50px 
+                li:nth-child(1)
+                    height: 96px
+                li:nth-child(2)
+                    height: 96px
 
 
 #nav:checked

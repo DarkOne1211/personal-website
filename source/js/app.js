@@ -1,6 +1,14 @@
 var timelinetextBox = document.getElementsByClassName("timeline-text");
 var timeline = document.getElementsByClassName("timeline");
 var coll = document.getElementsByClassName("collapsible");
+
+var headerProjectText = document.getElementsByClassName("header_image");
+var testh1 = headerProjectText[0].getElementsByTagName("h1");
+var testdata = document.getElementsByClassName("testdata");
+var testDataContainer = testdata[0].getElementsByClassName("C_Header");
+var allcards1 = testDataContainer[0].getElementsByClassName("card");
+var set1 = false;
+
 var screenwidth = screen.width;
 readjustHeight();
 activateCollapsible();
@@ -13,18 +21,28 @@ function readjustHeight() {
   }
 }
 
-function activateCollapsible() {
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
+function toggleButton(x) {
+  console.log(x);
+  console.log(allcards1);
+  var i = 0;
+  if (set1 === true) {
+    testh1[0].className = "";
+    testdata[0].style.height = "100vh";
+    testDataContainer[0].style.display = "none";
+    for (i = 0; i < allcards1.length; i++) {
+      allcards1[i].style.display = "none";
+    }
+    set1 = false;
+  } else {
+    testh1[0].className = "";
+    testh1[0].className += "offset1";
+    console.log(testdata[0]);
+    testdata[0].style.height = "150vh";
+    testDataContainer[0].style.display = "flex";
+    for (i = 0; i < allcards1.length; i++) {
+      allcards1[i].style.display = "block";
+    }
+    set1 = true;
   }
+  x.classList.toggle("change");
 }

@@ -4,8 +4,8 @@
   moz-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 @font-face {
-  font-family: Elianto-Regular;
-  src: url(Elianto-Regular.ttf); }
+  font-family: Ikaros-Regular;
+  src: url(Ikaros_Regular.otf); }
 
 @font-face {
   font-family: Caviar Dreams;
@@ -88,7 +88,7 @@ nav ul {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  font-family: Elianto-Regular; }
+  font-family: Ikaros-Regular; }
   .hero-text h1 {
     color: white;
     font-size: 48px; }
@@ -96,20 +96,41 @@ nav ul {
 .page2 {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   color: black; }
   .page2 .AboutHeader {
-    margin-top: -48px;
     padding: 0;
     background: orange;
     position: relative;
-    width: 100%;
+    width: 30%;
+    float: left;
     height: 100vh; }
     .page2 .AboutHeader p {
-      font-family: Elianto-Regular;
+      font-family: Ikaros-Regular;
       font-size: 48px;
       position: relative;
       text-align: center;
-      top: 50%; }
+      top: 40%; }
+  .page2 .page2leftWrapper {
+    height: 100vh;
+    width: 70%;
+    overflow: hidden; }
+  .page2 .page2left {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 70%;
+    height: 100vh;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: content-box;
+    padding-right: 20px;
+    scroll-behavior: smooth; }
   .page2 .timeline {
     font-size: 14px;
     background: #ffffff;
@@ -210,7 +231,8 @@ nav ul {
       .page2 .timeline ul li:last-child:before {
         display: none; }
       .page2 .timeline ul li:last-child {
-        padding: 17px 0; }
+        padding: 17px 0;
+        margin-bottom: 100px; }
     .page2 .timeline ul:before {
       content: "";
       height: 100%;
@@ -224,50 +246,64 @@ nav ul {
 .page3 {
   width: 100%;
   height: 100vh;
-  background: orange; }
+  background: white; }
   .page3 .projectHeader {
-    width: 40%;
+    width: 20%;
     height: 100vh;
-    background: orange;
     float: left; }
     .page3 .projectHeader .heroTitle {
       margin: 0;
       color: black;
-      font-size: 48px;
+      font-size: 36px;
       position: relative;
-      top: 40%;
+      top: 28%;
       text-align: center;
       text-transform: uppercase;
-      font-family: Elianto-Regular; }
+      font-family: Ikaros-Regular; }
     .page3 .projectHeader .localnav {
       position: relative;
-      top: 45%;
+      top: 30%;
       padding: 0;
       padding: 0; }
       .page3 .projectHeader .localnav ul {
         font-family: Caviar Dreams;
         list-style: none;
-        margin-left: -40px; }
+        margin-left: -40px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column; }
         .page3 .projectHeader .localnav ul li {
-          border-radius: 5px;
           width: 150px;
-          height: 20px;
+          height: 115px;
           margin: 7px auto;
-          display: flexbox;
+          display: flex;
           background: white;
-          text-align: center;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          transition: 0.3s; }
+          text-align: center; }
+          .page3 .projectHeader .localnav ul li h4 {
+            margin: 0;
+            padding: 0; }
+          .page3 .projectHeader .localnav ul li img {
+            width: 95%;
+            margin-top: 5px;
+            height: 82px; }
+          .page3 .projectHeader .localnav ul li .card {
+            height: 100%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+            transition: 0.3s; }
+          .page3 .projectHeader .localnav ul li .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); }
           .page3 .projectHeader .localnav ul li a {
             text-decoration: none;
             outline: none;
-            color: black; }
+            color: black;
+            display: block;
+            width: 100%;
+            height: 100%; }
         .page3 .projectHeader .localnav ul li:hover {
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5); }
   .page3 .projectBody {
-    width: 60%;
+    width: 80%;
     height: 100vh;
-    background: yellow;
     overflow: hidden; }
     .page3 .projectBody .projectBodywrapper {
       width: 100%;
@@ -276,45 +312,87 @@ nav ul {
       overflow-x: hidden;
       box-sizing: content-box;
       padding-right: 20px;
-      margin-left: 0px;
-      scroll-behavior: smooth; }
+      scroll-behavior: smooth;
+      align-content: center; }
+      .page3 .projectBody .projectBodywrapper .header_image {
+        color: whitesmoke;
+        background: url("../img/ai_logo.png");
+        background-position: 50% 50%;
+        align-content: center;
+        height: 100vh; }
+        .page3 .projectBody .projectBodywrapper .header_image h1 {
+          position: relative;
+          top: 50%; }
+      .page3 .projectBody .projectBodywrapper .python_header_image {
+        color: whitesmoke;
+        background: url("../img/python_logo.png");
+        background-position: 50% 90%;
+        align-content: center;
+        height: 100vh; }
+        .page3 .projectBody .projectBodywrapper .python_header_image h1 {
+          position: relative;
+          top: 50%; }
+      .page3 .projectBody .projectBodywrapper .ml_header_image {
+        color: whitesmoke;
+        background: url("../img/ml_logo.png");
+        background-position: 50% 50%;
+        align-content: center;
+        height: 100vh; }
+        .page3 .projectBody .projectBodywrapper .ml_header_image h1 {
+          position: relative;
+          top: 50%; }
+      .page3 .projectBody .projectBodywrapper .c_header_image {
+        color: whitesmoke;
+        background: url("../img/c_logo.png");
+        background-position: 15% 72%;
+        align-content: center;
+        height: 100vh; }
+        .page3 .projectBody .projectBodywrapper .c_header_image h1 {
+          position: relative;
+          top: 50%; }
+      .page3 .projectBody .projectBodywrapper .misc_header_image {
+        color: whitesmoke;
+        background: url("../img/misc_logo.jpg");
+        background-position: 50% 50%;
+        align-content: center;
+        height: 100vh; }
+        .page3 .projectBody .projectBodywrapper .misc_header_image h1 {
+          color: white;
+          position: relative;
+          top: 50%; }
       .page3 .projectBody .projectBodywrapper .testdata {
         width: 104%;
-        height: 100vh;
+        height: 200vh;
         background: whitesmoke;
-        margin: 0px auto;
-        border-style: solid;
-        border-color: black;
-        border-top: 0px;
-        border-left: 0px; }
-      .page3 .projectBody .projectBodywrapper .collapsible {
-        background-color: #777;
-        color: white;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        margin: 0;
-        margin-top: 10px; }
-      .page3 .projectBody .projectBodywrapper .active, .page3 .projectBody .projectBodywrapper .collapsible:hover {
-        background-color: #555; }
-      .page3 .projectBody .projectBodywrapper .collapsible:after {
-        content: '\002B';
-        color: white;
-        font-weight: bold;
-        float: right;
-        margin-right: 18px; }
-      .page3 .projectBody .projectBodywrapper .active:after {
-        content: "\2212"; }
-      .page3 .projectBody .projectBodywrapper .content {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        background-color: #f1f1f1; }
+        margin: 0px auto; }
+        .page3 .projectBody .projectBodywrapper .testdata h1 {
+          margin: 0;
+          padding: 0;
+          padding-top: 20px;
+          font-size: 36px;
+          text-align: center;
+          font-family: Caviar Dreams Bold; }
+        .page3 .projectBody .projectBodywrapper .testdata .card {
+          margin-top: 15px;
+          margin-left: 10px;
+          background: white;
+          width: 30%;
+          height: 200px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          transition: 0.3s; }
+        .page3 .projectBody .projectBodywrapper .testdata .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+        .page3 .projectBody .projectBodywrapper .testdata .container {
+          padding: 2px 16px; }
+        .page3 .projectBody .projectBodywrapper .testdata .C_Header {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 90%;
+          height: 100px;
+          margin: 0 auto;
+          display: hidden; }
 
 .page4 {
   overflow: hidden;
@@ -322,14 +400,15 @@ nav ul {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background: #000000;
-  color: white; }
+  background: #2D2D2D;
+  color: white;
+  font-family: Caviar Dreams; }
   .page4 .linklogos {
     margin: 0;
     padding: 0;
     position: relative;
     left: 50%;
-    top: 43%;
+    top: 28%;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -337,14 +416,26 @@ nav ul {
   .page4 h1 {
     position: relative;
     text-align: center;
-    top: 40%;
+    top: 20%;
     text-transform: uppercase; }
   .page4 p {
     position: relative;
     text-align: center;
-    top: 40%; }
+    top: 15%; }
   .page4 a {
     text-decoration: none; }
+  .page4 .card {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+    background: orange;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    border-radius: 10px; }
+  .page4 .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2); }
   .page4 .linkedinlink img {
     width: 50px; }
   .page4 .githublink img {
@@ -420,6 +511,34 @@ nav ul {
       .nav-btn i:nth-child(3) {
         margin-top: 4px; } }
 
+@media screen and (max-width: 1200px) {
+  .page3 .projectBody .projectBodywrapper .testdata .card {
+    width: 45%; }
+  .page2 .timeline {
+    width: 80%; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text {
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text {
+      float: none;
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 8px; } }
+
 @media screen and (max-width: 1500px) {
   .nav-wrapper {
     position: fixed;
@@ -429,8 +548,8 @@ nav ul {
     height: 100%;
     z-index: -1;
     background: orange;
-    width: 20%;
-    left: 80%;
+    width: 25%;
+    left: 75%;
     opacity: 0;
     transition: all 0.2s ease; }
     .nav-wrapper ul {
@@ -490,14 +609,29 @@ nav ul {
       .nav-btn i:nth-child(3) {
         margin-top: 4px; } }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 864px) {
+  .page2 {
+    height: auto; }
+    .page2 .page2left {
+      height: auto; }
+    .page2 .AboutHeader {
+      clear: both;
+      width: 100%; }
+    .page2 .page2leftWrapper {
+      width: 100%;
+      height: auto; }
   .page3 {
     height: 200vh; }
     .page3 .projectHeader {
       width: 100%;
-      clear: both; }
+      clear: both;
+      background: #2d2d2d; }
+      .page3 .projectHeader .heroTitle {
+        color: orange; }
     .page3 .projectBody {
       width: 100%; }
+      .page3 .projectBody .projectBodywrapper .testdata .card {
+        width: 45%; }
   .page2 .timeline {
     width: 80%; }
     .page2 .timeline ul li:nth-child(odd) .timeline-text {
@@ -532,8 +666,8 @@ nav ul {
     height: 100%;
     z-index: -1;
     background: white;
-    width: 35% !important;
-    left: 65% !important;
+    width: 35%;
+    left: 65%;
     opacity: 0;
     transition: all 0.2s ease; }
     .nav-wrapper ul {
@@ -592,6 +726,174 @@ nav ul {
         opacity: 1; }
       .nav-btn i:nth-child(3) {
         margin-top: 4px; } }
+
+@media screen and (max-width: 500px) {
+  .page3 {
+    height: 200vh; }
+    .page3 .projectHeader {
+      width: 100%;
+      clear: both; }
+    .page3 .projectBody {
+      width: 100%; }
+      .page3 .projectBody .projectBodywrapper .testdata .card {
+        width: 280px;
+        height: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 10px; }
+      .page3 .projectBody .projectBodywrapper .testdata .C_Header {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-right: 25px; }
+  .page2 .timeline {
+    width: 80%; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text {
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text {
+      float: none;
+      left: 50%;
+      transform: translateX(-50%) !important; }
+    .page2 .timeline ul li:nth-child(even) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:nth-child(odd) .timeline-text:before {
+      display: none; }
+    .page2 .timeline ul li:before {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 8px; }
+  .logo {
+    padding: 0; }
+  .nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: white;
+    width: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: all 0.2s ease; }
+    .nav-wrapper ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%; }
+      .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px; }
+        .nav-wrapper ul li:nth-child(1) a {
+          transition-delay: 0.2s; }
+        .nav-wrapper ul li:nth-child(2) a {
+          transition-delay: 0.3s; }
+        .nav-wrapper ul li:nth-child(3) a {
+          transition-delay: 0.4s; }
+        .nav-wrapper ul li:nth-child(4) a {
+          transition-delay: 0.5s; }
+        .nav-wrapper ul li:not(:first-child) {
+          margin-left: 0; }
+        .nav-wrapper ul li a {
+          padding: 10px 24px;
+          opacity: 0;
+          color: #000;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 1.2px;
+          transform: translateX(-20px);
+          transition: all 0.2s ease; }
+  .nav-btn {
+    background-color: orange;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    margin-right: 10px;
+    z-index: 9999;
+    border-radius: 50%; }
+    .nav-btn i {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+      margin-left: 14px; }
+      .nav-btn i:nth-child(1) {
+        margin-top: 16px; }
+      .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1; }
+      .nav-btn i:nth-child(3) {
+        margin-top: 4px; } }
+
+@media screen and (max-height: 1025px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 20%; }
+  .page3 .projectHeader .localnav {
+    top: 20%; } }
+
+@media screen and (max-height: 900px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 10%; }
+  .page3 .projectHeader .localnav {
+    top: 10%; } }
+
+@media screen and (max-height: 750px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 2%; }
+  .page3 .projectHeader .localnav {
+    top: 2%; } }
+
+@media screen and (max-height: 680px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 3%; }
+  .page3 .projectHeader .localnav {
+    top: 3%; }
+    .page3 .projectHeader .localnav ul li {
+      height: 100px; }
+      .page3 .projectHeader .localnav ul li img {
+        height: 70px; } }
+
+@media screen and (max-height: 650px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 1%; }
+  .page3 .projectHeader .localnav {
+    top: 1%; }
+    .page3 .projectHeader .localnav ul li {
+      height: 100px; }
+      .page3 .projectHeader .localnav ul li img {
+        height: 70px; } }
+
+@media screen and (max-height: 580px) {
+  .page3 .projectHeader .heroTitle {
+    color: orange;
+    top: 1%; }
+  .page3 .projectHeader .localnav {
+    top: 1%; }
+    .page3 .projectHeader .localnav ul li {
+      width: 45%;
+      height: 80px; }
+      .page3 .projectHeader .localnav ul li img {
+        height: 50px; } }
 
 #nav:checked + .nav-btn {
   transform: rotate(45deg); }
